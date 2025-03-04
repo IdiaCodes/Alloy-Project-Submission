@@ -8,7 +8,7 @@ const axios = require("axios");
 const maryDoe = {
   email_address: "test@example.com",
   phone_number: "1234567890",
-  name_first: "John",
+  name_first: "Mary",
   name_last: "Doe",
   address_line_1: "123 Main St",
   address_country_code: "US",
@@ -47,17 +47,19 @@ const maryReview = {
   document_ssn: "123456789",
   birth_date: "1999-05-15",
 };
+
 function validateAndSendData(data) {
+  const allValid = Object.values(data).every(
+    (value) => value !== undefined && value !== null && value !== ""
+  );
   if (
-    !data.name_last ||
-    !data.name_first
-    //handle required fields in API call
+    !allValid
+    //handle required fields
   ) {
-    console.error(
-      "Validation failed: 'name_last' and 'name_first' are required  "
-    );
+    console.error("Validation failed: All fields are required  ");
     return;
   }
+
   if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email_address) == false) {
     console.error("Please enter valid email");
     return;
@@ -82,7 +84,7 @@ function validateAndSendData(data) {
     console.error("Sorry, we only support US at the moment!");
     return;
   }
-
+  //validate country
   const config = {
     method: "post",
     url: "https://sandbox.alloy.co/v1/evaluations",
