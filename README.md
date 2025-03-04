@@ -35,12 +35,16 @@ vi. Country (must be “US” for sake of this assignment)
 
 </br>
 The API call referenced only name_first and name_last as its required fields so I created an alternate code snippet to validate just that field 
- // if (
-  //   !data.name_last ||
-  //   !data.name_first
-  //   //handle required fields in API call
-  // ) {
-  //   console.error(
-  //     "Validation failed: 'name_last' and 'name_first' are required  "
-  //   );
-  //   return;
+</br>
+
+```
+if (
+    !data.name_last ||
+    !data.name_first
+    //handle required fields in API call
+  ) {
+    console.error(
+     "Validation failed: 'name_last' and 'name_first' are required  "
+   );
+     return;
+```
