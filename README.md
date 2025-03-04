@@ -29,6 +29,7 @@ c. Processes the API response and prints an appropriate message
 - Country (must be “US” for sake of this assignment)
 </br>
 4. Submit to our API
+  
    - Send the above details as a JSON payload via an HTTP POST request.
   - Process the API Response
    i. If the response is {"summary": {"outcome": "Approved"}}
@@ -41,8 +42,11 @@ c. Processes the API response and prints an appropriate message
    time."
 </br> 
 Technologies used:
-- Postman - GET request
-- Autoregex - Validation Regex code
+</br>
+Postman : GET request
+</br>
+Autoregex : Validation Regex code
+
 </br>
 The API call referenced only name_first and name_last as its required fields so I created an alternate code snippet to validate just that field 
 </br>
