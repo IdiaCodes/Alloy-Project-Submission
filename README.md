@@ -2,15 +2,22 @@
 
 # Assignment
 
-JavaScript, write a script that:
+JavaScript
+</br>
+Write a script that:
+</br>
 a. Collects applicant details (these can be hardcoded into your script or done
 via a simple console input)
+</br>
 b. Submits the details to Alloy’s sandbox API
-c. Processes the API response and prints an appropriate message 3. Collect the following applicant details:
+</br>
+c. Processes the API response and prints an appropriate message
+</br>
+3. Collect the following applicant details:
+</br>
 a. First Name
 b. Last Name
 c. Date of Birth (ISO-8601 format: YYYY-MM-DD)
-
 d. SSN (9 digits, no dashes)
 e. Email Address (valid format)
 f. Address
@@ -20,7 +27,7 @@ iii. City
 iv. State (must be a two-letter code, ex. NY, CA, etc.)
 v. Zip/Postal Code
 vi. Country (must be “US” for sake of this assignment)
-
+</br>
 4. Submit to our API
    a. Send the above details as a JSON payload via an HTTP POST request.
    b. Process the API Response
