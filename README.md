@@ -15,22 +15,22 @@ c. Processes the API response and prints an appropriate message
 </br>
 3. Collect the following applicant details:
 </br>
-a. First Name
-b. Last Name
-c. Date of Birth (ISO-8601 format: YYYY-MM-DD)
-d. SSN (9 digits, no dashes)
-e. Email Address (valid format)
-f. Address
-i. Line 1
-ii. Line 2
-iii. City
-iv. State (must be a two-letter code, ex. NY, CA, etc.)
-v. Zip/Postal Code
-vi. Country (must be “US” for sake of this assignment)
+-  First Name
+-  Last Name
+-  Date of Birth (ISO-8601 format: YYYY-MM-DD)
+-  SSN (9 digits, no dashes)
+-  Email Address (valid format)
+-  Address
+  - i. Line 1
+-  Line 2
+-  City
+- State (must be a two-letter code, ex. NY, CA, etc.)
+-  Zip/Postal Code
+- Country (must be “US” for sake of this assignment)
 </br>
 4. Submit to our API
-   a. Send the above details as a JSON payload via an HTTP POST request.
-   b. Process the API Response
+   - Send the above details as a JSON payload via an HTTP POST request.
+  - Process the API Response
    i. If the response is {"summary": {"outcome": "Approved"}}
    → Print: "Congratulations! You are approved."
    ii. If the response is {"summary": {"outcome": "Manual
@@ -39,7 +39,10 @@ vi. Country (must be “US” for sake of this assignment)
    iii. If the response is {"summary": {"outcome": "Deny"}} →
    Print: "Unfortunately, we cannot approve your application at this
    time."
-
+</br> 
+Technologies used:
+- Postman - GET request
+- Autoregex - Validation Regex code
 </br>
 The API call referenced only name_first and name_last as its required fields so I created an alternate code snippet to validate just that field 
 </br>
